@@ -8,9 +8,9 @@ export default class Wheel extends React.Component {
 			<>
 				<div id="wheelWrapper" className={wheelCss.wheelWrapper}>
 					<div className={wheelCss.wheelOuter}>
-						<div className={wheelCss.wheelInner}></div>
+						<div className={wheelCss.wheelInner} onClick={this.props.chooseItem}></div>
 						<div className={wheelCss.topLastRowWheel}>
-							<div className={wheelCss.iconsWrapperWheel}>MENU</div>
+							<div className={wheelCss.iconsWrapperWheel} onClick={()=>this.props.chooseItem("Menu")}>MENU</div>
 						</div>
 						<div className={wheelCss.middleRowWheel}>
 							<div className={wheelCss.iconsWrapperWheel}>
@@ -41,15 +41,16 @@ export default class Wheel extends React.Component {
 		);
 	}
 	componentDidMount() {
+		const { changeMenuItem } = this.props;
 		var wheelRegion = document.getElementById("wheelWrapper");
 
-		var region = new ZingTouch.Region(wheelRegion);
+		var rotate = new ZingTouch.Region(wheelRegion);
+		
 
-		region.bind(wheelRegion, "rotate", function (e) {
-			// var rotatable = document.getElementById("rotatable");
-			// currentAngle += e.detail.distanceFromLast;
-			// rotatable.style.transform = "rotate(" + currentAngle + "deg)";
-			console.log(e.detail.distanceFromLast);
+		rotate.bind(wheelRegion, "rotate", function (e) {
+			if (e.detail.distanceFromLast > 1.5) {
+				changeMenuItem();
+			}
 		});
 	}
 }

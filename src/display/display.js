@@ -6,7 +6,12 @@ export default class Display extends React.Component {
 		return (
 			<>
 				<div className={displayCss.displayWrapper}>
-					<Menu></Menu>
+					{this.props.display == "Menu" && (
+						<Menu
+							menuItems={this.props.menuItems}
+							activemenu={this.props.activemenu}
+						></Menu>
+					)}
 				</div>
 			</>
 		);
