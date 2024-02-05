@@ -1,8 +1,9 @@
 .wheelWrapper {
 	background-color: #b9b9b9;
 	height: 270px;
-	width: 380px;
-	margin: auto;
+	width: 80%;
+	margin:  auto;
+    
 }
 
 .wheelOuter {
@@ -31,22 +32,34 @@
 	align-items: center;
 }
 
-.menuWheel {
-	height: 50px;
-	width: 50px;
-	background-color: black;
-}
-
 .middleRowWheel {
 	display: flex;
-    padding: 0px 15px;
+	padding: 0px 15px;
 	height: 110px;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.leftRightIcon {
-	background-color: black;
+.iconsWrapperWheel {
+	/* background-color: black; */
+	/* border: 1px solid black; */
 	height: 50px;
 	width: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-weight: 750;
+}
+
+.iconsWrapperWheel img {
+	width: 100%;
+	/* height: 100%; */
+	text-align: center;
+}
+
+.rotate180 {
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-ms-transform: rotate(18deg);
+	transform: rotate(180deg);
 }

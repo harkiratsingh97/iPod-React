@@ -1,0 +1,9 @@
+.displayWrapper {
+	background-color: white;
+	height: 280px;
+	width: 380px;
+	margin-bottom: 25px;
+	border-radius: 10px;
+	border: 5px solid black;
+    display: flex;
+}
