@@ -14,9 +14,9 @@ export default class Ipod extends React.Component {
 	}
 
 	changeMenuItem = () => {
-		if (this.state.display == "Menu") {
+		if (this.state.display === "Menu") {
 			let { activeMenu } = this.state;
-			if (activeMenu == 3) {
+			if (activeMenu === 3) {
 				activeMenu = 0;
 			} else {
 				activeMenu++;
@@ -26,7 +26,7 @@ export default class Ipod extends React.Component {
 	};
 
 	chooseItem = (menu) => {
-		if (menu == "Menu") {
+		if (menu === "Menu") {
 			this.setState((prevState) => ({
 				display: "Menu",
 			}));

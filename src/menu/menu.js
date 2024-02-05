@@ -9,9 +9,9 @@ const MenuItems = styled.li`
 	font-size: 22px;
 	font-weight: 500;
 	line-height: 47px;
-	color: ${(props) => (props.activemenu == props.index ? "white" : "black")};
+	color: ${(props) => (props.activemenu === props.index ? "white" : "black")};
 	background-color: ${(props) =>
-		props.activemenu == props.index ? "#3783D8" : "none"};
+		props.activemenu === props.index ? "#3783D8" : "none"};
 	padding-left: 5px;
 `;
 
