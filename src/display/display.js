@@ -3,6 +3,8 @@ import displayCss from "./display.module.css";
 import Menu from "../menu/menu";
 import Demo from "../demo/demo";
 
+
+// It is our screen to display Menu's and other Demo Screens
 export default class Display extends React.Component {
 	render() {
 		return (

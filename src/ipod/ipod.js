@@ -3,6 +3,8 @@ import Display from "../display/display";
 import Wheel from "../wheel/wheel";
 import ipodCss from "./ipod.module.css";
 
+//This is the main component where all the states and handler functions are kept
+
 export default class Ipod extends React.Component {
 	constructor() {
 		super();
@@ -15,6 +17,7 @@ export default class Ipod extends React.Component {
 		};
 	}
 
+	//This function is used to change the item in Menu while rotating
 	changeMenuItem = () => {
 		if (this.state.display === "mainMenu") {
 			let { activeMenu } = this.state;
@@ -36,6 +39,7 @@ export default class Ipod extends React.Component {
 		}
 	};
 
+	//This function is used to go back to the previous screen when Menu key is pressed
 	handleMenuClick = () => {
 		if (this.state.mainMenu.find((item) => item === this.state.display)) {
 			this.setState({
@@ -51,6 +55,7 @@ export default class Ipod extends React.Component {
 		}
 	};
 
+	//This function is used when we click on any meny item using middle button
 	chooseItem = () => {
 		if (this.state.display === "mainMenu") {
 			this.setState((prevState) => ({
@@ -70,6 +75,7 @@ export default class Ipod extends React.Component {
 		return (
 			<>
 				<div className={ipodCss.ipodWrapper}>
+					{/*This is the screen where all the content is visible on our ipod */}
 					<Display
 						display={this.state.display}
 						menuItems={
@@ -78,6 +84,8 @@ export default class Ipod extends React.Component {
 						}
 						activemenu={this.state.activeMenu}
 					/>
+					
+					{/*This is the button and dial which is used to interact with the iPod */}
 					<Wheel
 						changeMenuItem={this.changeMenuItem}
 						chooseItem={this.chooseItem}

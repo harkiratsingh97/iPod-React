@@ -1,9 +1,8 @@
 import React from "react";
 import menuCss from "./menu.module.css";
-// import MenuItems from "../menuItems/menuItems";
-
 import styled from "styled-components";
 
+//Styled Component used to display all the items in the list and the style changes accoring to the activeMenu for selected Item
 const MenuItems = styled.li`
 	list-style: none;
 	font-size: 22px;
@@ -15,12 +14,15 @@ const MenuItems = styled.li`
 	padding-left: 5px;
 `;
 
+//Here all the list items are displayed
 export default class Menu extends React.Component {
 	render() {
 		return (
 			<>
 				<div className={menuCss.leftSide}>
 					<ul className={menuCss.menuItems}>
+						{/*This is shown when we are at Main Menu*/}
+
 						{this.props.display === "mainMenu" && (
 							<>
 								<h2>iPod.js</h2>
@@ -35,6 +37,8 @@ export default class Menu extends React.Component {
 								))}
 							</>
 						)}
+
+						{/*This is shown when we are at SubMenu - Music*/}
 
 						{this.props.display === "Music" && (
 							<>

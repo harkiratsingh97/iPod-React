@@ -2,6 +2,7 @@ import React from "react";
 import wheelCss from "./wheel.module.css";
 import ZingTouch from "zingtouch";
 
+//Buttons for Interacting with our App
 export default class Wheel extends React.Component {
 	render() {
 		return (
@@ -48,12 +49,15 @@ export default class Wheel extends React.Component {
 			</>
 		);
 	}
+
+	//Setting the Region and calling the specified function under ComponentDidMount Lifecycle method
 	componentDidMount() {
 		const { changeMenuItem } = this.props;
 		var wheelRegion = document.getElementById("wheelWrapper");
 
 		var rotate = new ZingTouch.Region(wheelRegion);
 
+		//Calling the change Item function when wheel is rotated for a specific amount
 		rotate.bind(wheelRegion, "rotate", function (e) {
 			if (Math.abs(e.detail.distanceFromLast) > 2) {
 				changeMenuItem();
