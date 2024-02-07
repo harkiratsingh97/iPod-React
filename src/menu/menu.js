@@ -15,27 +15,41 @@ const MenuItems = styled.li`
 	padding-left: 5px;
 `;
 
-// // background-color : ${(props) => (props.filled ? props.bg : "#fff")};
-// color:  ${(props) => (props.filled ? props.color : "#000")};
-// border:  ${(props) => (props.filled && "none")};
-// border-color : ${(props) => (!props.filled && "#000")}
-
 export default class Menu extends React.Component {
 	render() {
 		return (
 			<>
 				<div className={menuCss.leftSide}>
 					<ul className={menuCss.menuItems}>
-						<h2>iPod.js</h2>
-						{this.props.menuItems.map((item, index) => (
-							<MenuItems
-								key={index}
-								index={index}
-								activemenu={this.props.activemenu}
-							>
-								{item}
-							</MenuItems>
-						))}
+						{this.props.display === "mainMenu" && (
+							<>
+								<h2>iPod.js</h2>
+								{this.props.menuItems.map((item, index) => (
+									<MenuItems
+										key={index}
+										index={index}
+										activemenu={this.props.activemenu}
+									>
+										{item}
+									</MenuItems>
+								))}
+							</>
+						)}
+
+						{this.props.display === "Music" && (
+							<>
+								<h2>Music</h2>
+								{this.props.menuItems.map((item, index) => (
+									<MenuItems
+										key={index}
+										index={index}
+										activemenu={this.props.activemenu}
+									>
+										{item}
+									</MenuItems>
+								))}
+							</>
+						)}
 					</ul>
 				</div>
 				<div className={menuCss.rightSide}></div>

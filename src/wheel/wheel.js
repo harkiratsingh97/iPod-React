@@ -8,9 +8,17 @@ export default class Wheel extends React.Component {
 			<>
 				<div id="wheelWrapper" className={wheelCss.wheelWrapper}>
 					<div className={wheelCss.wheelOuter}>
-						<div className={wheelCss.wheelInner} onClick={this.props.chooseItem}></div>
+						<div
+							className={wheelCss.wheelInner}
+							onClick={this.props.chooseItem}
+						></div>
 						<div className={wheelCss.topLastRowWheel}>
-							<div className={wheelCss.iconsWrapperWheel} onClick={()=>this.props.chooseItem("Menu")}>MENU</div>
+							<div
+								className={wheelCss.iconsWrapperWheel}
+								onClick={this.props.handleMenuClick}
+							>
+								MENU
+							</div>
 						</div>
 						<div className={wheelCss.middleRowWheel}>
 							<div className={wheelCss.iconsWrapperWheel}>
@@ -45,10 +53,9 @@ export default class Wheel extends React.Component {
 		var wheelRegion = document.getElementById("wheelWrapper");
 
 		var rotate = new ZingTouch.Region(wheelRegion);
-		
 
 		rotate.bind(wheelRegion, "rotate", function (e) {
-			if (e.detail.distanceFromLast > 1.5) {
+			if (Math.abs(e.detail.distanceFromLast) > 2) {
 				changeMenuItem();
 			}
 		});

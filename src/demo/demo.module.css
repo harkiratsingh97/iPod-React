@@ -1,0 +1,6 @@
+.demoDisplay {
+	display: flex;
+	margin: auto;
+	font-size: 45px;
+    font-weight: 400;
+}

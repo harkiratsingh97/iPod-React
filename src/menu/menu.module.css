@@ -7,10 +7,15 @@
 	width: 50%;
 	/* background-color: aqua; */
 }
-.menuItems{
-    /* list-style: none; */
+.menuItems {
+	/* list-style: none; */
 	padding: 7px;
 	margin: 0px;
 	/* display: flex; */
-	
+}
+
+.rightSide {
+	background-image: url("https://i.pinimg.com/originals/9b/c9/39/9bc939b9188c241ef7c2edc00dbde1bd.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
