@@ -1,6 +1,6 @@
 # React iPod App
 
-This is a simple iPod-like music player app built using React.js. It utilizes the ZingTouch library's rotate function to navigate through menu items, providing an intuitive and interactive user experience.
+This is a simple iPod-like music player app built using React.js. It utilizes the ZingTouch library's rotate function to navigate through menu items, providing an intuitive and interactive user experience
 
 ## Features
 
