@@ -5,7 +5,7 @@ This is a simple iPod-like music player app built using React.js. It utilizes th
 ## Features
 
 - **Menu Navigation**: Use the ZingTouch rotate function to navigate through menu items.
-- **Interactive Interface**: The app provides an intuitive interface similar to traditional iPod devices.
+- **Interactive Interface**: The app provides an intuitive interface similar to traditional iPod devices
 
 ## Installation
 
