@@ -26,7 +26,7 @@ npm start
 ## Usage
 
 - Once the app is running, you can use the ZingTouch rotate function to navigate through the menu items.
-- Select a menu item by clicking on it or pressing the enter key.
+- Select a menu item by clicking on it or pressing the enter key
 
 ## Technologies Used
 
